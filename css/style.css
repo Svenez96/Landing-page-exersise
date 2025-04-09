@@ -1,0 +1,70 @@
+@import url(./root.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--text-font-family);
+    color:var(--text-color) ;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font-family);
+    color: var(--secondary-color);
+}
+
+h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
+    font-family: var(--title-font-family);
+    color:var(--text-light-color);
+}
+
+a {
+    transition: all ease-in-out 0.25s;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.flex {
+    display:flex;
+}
+
+.wrapper {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .container {
+    width: 100%;
+    max-width:var(--container-max-width);
+    justify-content: center;
+}
+
+nav {
+    align-items: space-between;
+    background-color: var(--secondary-color);
+}
+
+nav .nav__logo img {
+    width: 32px;
+    height: 32px;
+}
+
+nav .nav__menu {
+    flex-grow:1;
+   
+}
+
+nav .nav__menu-item {
+    list-style: none;
+}
+
+
+
+

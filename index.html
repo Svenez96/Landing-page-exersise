@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Domenico Mazza" />
     <title>Tidy HTML Demo - Home</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!----------------------------------------------------------NAV--------------------------------------------------------------------------->
     <nav class="wrapper">
-      <div class="container">
-        <div class="nav__left">
-          <a href="#"><img src="#" alt="main logo" /></a>
+      <div class="container flex">
+        <div class="nav__logo">
+          <a href="#"><img src="assets/logo.svg" alt="main logo" /></a>
         </div>
-        <div class="nav__center">
-          <ul class="nav__center-menu">
+        <div class="nav__menu">
+          <ul class="nav__menu-item">
             <li><a href="#">Pricing</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Blog</a></li>
@@ -22,9 +23,9 @@
             <li><a href="#">Resources</a></li>
           </ul>
         </div>
-        <div class="nav__right">
+        <div class="nav__actions">
           <a href="#">Sign In</a>
-          <a href="#">Request Demo</a>
+          <a href="#">Request Demo <span>-&gt;</span></a>
         </div>
       </div>
     </nav>

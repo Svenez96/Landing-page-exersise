@@ -1,0 +1,14 @@
+:root{
+    /* Sizes */
+    --container-max-w:1152px;
+    --global-font-size:16px;
+    /* Colors */
+    --primary-color:#2274EA;
+    --secondary-color:#101D2C;
+    --text-light-color:#F1F5F9;
+    --text-color:#899AB1;
+    /* Fonts */
+    --text-font-family:"Inter", sans-serif;
+    --title-font-family:"Playfair Display", serif;
+
+}
