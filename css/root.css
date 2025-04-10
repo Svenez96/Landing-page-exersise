@@ -2,6 +2,7 @@
     /* Sizes */
     --container-max-w:1152px;
     --global-font-size:16px;
+    --spacing:0.25rem;
     /* Colors */
     --primary-color:#2274EA;
     --secondary-color:#101D2C;

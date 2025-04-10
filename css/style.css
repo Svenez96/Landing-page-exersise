@@ -8,16 +8,20 @@
     font-family:var(--text-font-family);
     color:var(--text-color) ;
     text-decoration: none;
+    font-style: normal;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--title-font-family);
     color: var(--secondary-color);
+    -webkit-font-smoothing:antialiased;
 }
 
 h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
     font-family: var(--title-font-family);
     color:var(--tertiary-color);
+    -webkit-font-smoothing:antialiased;
 }
 
 
@@ -30,34 +34,6 @@ a:hover {
     color: var(--primary-color);
 }
 
-a.dark {
-    color: var(--secondary-color);
-}
-
-a.light {
-    color: var(--text-light-color);
-}
-
-a.light:hover {
-    color: white;
-}
-
-a.a-arrow {
-    position: relative;
-}
-
-a.a-arrow .arrow-r {
-    color: var(--primary-color); /* --primary-color: #2174ea; */
-    position: absolute;
-    transition: all ease-in-out 0.15s;
-    left: calc(100% + 3px);
-}
-
-a.a-arrow:hover .arrow-r {
-    margin-left: 2px;
-}
-
-
 
 .flex {
     display:flex;
@@ -68,17 +44,19 @@ a.a-arrow:hover .arrow-r {
     display: flex;
     flex-direction: column;
     align-items: center;
+ 
 }
 
 .wrapper .container {
     width: 100%;
     max-width:var(--container-max-w);
-    padding: 1.5rem;
+
 }
 
 /*-------------- DROPDOWN MENU ----------------- */
 .dropdown {
     position: relative;
+   
 }
 
 .dropdown a:hover {
@@ -89,19 +67,20 @@ a.a-arrow:hover .arrow-r {
     height: 12px;
     width: 12px;
     fill: var(--text-color);
+    
 }
 
 .dropdown .dropdown__body {
     visibility: hidden;
     opacity: 0;
-    margin-top: -5px;
+    
     position: absolute;
     background-color: white;
     border-radius: 4px;
     padding: 0.5rem 1rem;
-    top: calc(100% + 0.5rem);
+    top: calc(75% + 0.5rem);
     right: 0;
-    width: 150px;
+    width: calc(var(--spacing) * 40);
     display: flex;
     flex-direction: column;
     transition: all ease-in-out 0.25s;
@@ -117,7 +96,11 @@ a.a-arrow:hover .arrow-r {
     display: block;
     padding: 0.5rem;
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+a.dark {
+    color: var(--secondary-color);
 }
 
 
@@ -125,12 +108,20 @@ a.a-arrow:hover .arrow-r {
 
 nav {
     background-color: var(--secondary-color);
-    height: 80px;
+    height: calc(var(--spacing) * 20);
     justify-content: center;
 }
 
 nav .nav__container {
-    gap:40px;
+    
+    padding:0 24px;
+}
+
+nav .nav__logo {
+    display:flex ;
+    align-items: center;
+    padding-right:calc(var(--spacing) *4);
+    padding-top: var(--spacing);
 }
 
 nav .nav__logo img {
@@ -138,26 +129,121 @@ nav .nav__logo img {
     height: 32px;
 }
 
-nav .nav__menu{
+nav .nav__menu {
     display: flex;
+    justify-content: flex-start;
     flex-grow:1;  
+    flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
-  
+}
+
+nav .nav__menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    
 }
 
 nav .nav__menu-item a {
-    padding: 0.5rem 0;
+    padding: calc(var(--spacing) *5);
 }
 
 
 nav .nav__actions {
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+}
+
+nav .nav__actions-item {
+    display: flex;
+    list-style: none;
+}
+
+nav .nav__actions-item a {
+    padding: calc(var(--spacing) *5);
+}
+
+a.light {
+    color: var(--text-light-color);
+}
+
+a.light:hover {
+    color: white;
+}
+
+a.a-arrow {
+    position: relative;
+}
+
+a.a-arrow .arrow-r {
+    color: var(--primary-color);
+    transition: all ease-in-out 0.15s;
+    left: calc(100% + 3px);
+}
+
+a.a-arrow:hover .arrow-r {
+    margin-left: 2px;
 }
 
 
 
+/*------------------ HEADER ------------------*/
 
+header {
+    background-color: var(--secondary-color);
+    padding-top: 164px;
+    padding-bottom: 170px;
+}
+header .header__container {
+   
+    width: 100%;
+    max-width: var(--global-max-w);
+}
 
+header .header__left_top {
+    display: flex;
+    flex-direction: column;
+    margin-right:64px ;
+    text-align: left;
+    
+    
+}
+
+header .header__left_top h1 {
+    font-size: 64px;
+    line-height: 74px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+    
+
+header .header__left_top p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+   
+header .header__left_bottom {
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    
+}
+
+header .header__left_bottom-item {
+    padding: 1px;
+    background-color: var(--primary-color);
+}
+header .header__right {
+    display: flex;
+}
+
+header .header__right img{
+    width: 540px;
+    height: 405px;
+}
