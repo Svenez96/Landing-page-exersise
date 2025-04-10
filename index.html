@@ -10,22 +10,48 @@
   <body>
     <!----------------------------------------------------------NAV--------------------------------------------------------------------------->
     <nav class="wrapper">
-      <div class="container flex">
+      <div class="container flex nav__container">
         <div class="nav__logo">
           <a href="#"><img src="assets/logo.svg" alt="main logo" /></a>
         </div>
         <div class="nav__menu">
-          <ul class="nav__menu-item">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Wall of Love</a></li>
-            <li><a href="#">Resources</a></li>
-          </ul>
-        </div>
+          <div class="nav__menu-item">
+              <a href="">Pricing</a>
+          </div>
+          <div class="nav__menu-item">
+              <a href="">About</a>
+          </div>
+          <div class="nav__menu-item">
+              <a href="">Blog</a>
+          </div>
+          <div class="nav__menu-item">
+              <a href="">Wall of Love</a>
+          </div>
+          <div class="nav__menu-item dropdown">
+              <a href="#">
+                  Resources
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 4.305L5.989 8.598 1.695 4.305A1 1 0 00.28 5.72l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"></path>
+                  </svg>
+              </a>
+              <div class="dropdown__body">
+                  <div class="dropdown__body-item">
+                      <a class="dark" href="">404</a>
+                  </div>
+                  <div class="dropdown__body-item">
+                      <a class="dark" href="">Support</a>
+                  </div>
+              </div>
+          </div>
+      </div>
         <div class="nav__actions">
-          <a href="#">Sign In</a>
-          <a href="#">Request Demo <span>-&gt;</span></a>
+          <div class="nav__actions-item">
+            <a href="#">Sign In</a>
+          </div>
+          <div class="nav__actions-item">
+            <a class="light a-arrow" href="#">Request Demo 
+              <span class="arrow-r">-&gt;</span></a>
+          </div>
         </div>
       </div>
     </nav>

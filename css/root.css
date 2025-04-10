@@ -5,8 +5,9 @@
     /* Colors */
     --primary-color:#2274EA;
     --secondary-color:#101D2C;
-    --text-light-color:#F1F5F9;
+    --tertiary-color:#F1F5F9;
     --text-color:#899AB1;
+    --text-light-color:oklch(0.869 0.022 252.894);
     /* Fonts */
     --text-font-family:"Inter", sans-serif;
     --title-font-family:"Playfair Display", serif;

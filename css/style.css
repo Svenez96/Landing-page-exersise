@@ -17,8 +17,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
     font-family: var(--title-font-family);
-    color:var(--text-light-color);
+    color:var(--tertiary-color);
 }
+
 
 a {
     transition: all ease-in-out 0.25s;
@@ -28,6 +29,35 @@ a {
 a:hover {
     color: var(--primary-color);
 }
+
+a.dark {
+    color: var(--secondary-color);
+}
+
+a.light {
+    color: var(--text-light-color);
+}
+
+a.light:hover {
+    color: white;
+}
+
+a.a-arrow {
+    position: relative;
+}
+
+a.a-arrow .arrow-r {
+    color: var(--primary-color); /* --primary-color: #2174ea; */
+    position: absolute;
+    transition: all ease-in-out 0.15s;
+    left: calc(100% + 3px);
+}
+
+a.a-arrow:hover .arrow-r {
+    margin-left: 2px;
+}
+
+
 
 .flex {
     display:flex;
@@ -42,13 +72,65 @@ a:hover {
 
 .wrapper .container {
     width: 100%;
-    max-width:var(--container-max-width);
+    max-width:var(--container-max-w);
+    padding: 1.5rem;
+}
+
+/*-------------- DROPDOWN MENU ----------------- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown a:hover {
+    color: var(--text-color);
+}
+
+.dropdown a svg {
+    height: 12px;
+    width: 12px;
+    fill: var(--text-color);
+}
+
+.dropdown .dropdown__body {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.25s;
+}
+
+.dropdown:hover .dropdown__body {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+}
+
+.dropdown .dropdown__body .dropdown__body-item a {
+    display: block;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+
+/*----------- NAVBAR ------------*/
+
+nav {
+    background-color: var(--secondary-color);
+    height: 80px;
     justify-content: center;
 }
 
-nav {
-    align-items: space-between;
-    background-color: var(--secondary-color);
+nav .nav__container {
+    gap:40px;
 }
 
 nav .nav__logo img {
@@ -56,14 +138,25 @@ nav .nav__logo img {
     height: 32px;
 }
 
-nav .nav__menu {
-    flex-grow:1;
-   
+nav .nav__menu{
+    display: flex;
+    flex-grow:1;  
+    align-items: center;
+    gap: 40px;
+  
 }
 
-nav .nav__menu-item {
-    list-style: none;
+nav .nav__menu-item a {
+    padding: 0.5rem 0;
 }
+
+
+nav .nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 
 
 
