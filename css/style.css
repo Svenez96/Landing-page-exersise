@@ -175,18 +175,14 @@ a.light:hover {
     color: white;
 }
 
-a.a-arrow {
+a.a-arrow .arrow-r {
+    color: var(--primary-color);
+    transition: all ease-in-out 0.25s;
     position: relative;
 }
 
-a.a-arrow .arrow-r {
-    color: var(--primary-color);
-    transition: all ease-in-out 0.15s;
-    left: calc(100% + 3px);
-}
-
-a.a-arrow:hover .arrow-r {
-    margin-left: 2px;
+a.a-arrow:hover .arrow-r{
+    left: 3px;
 }
 
 
