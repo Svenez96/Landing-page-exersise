@@ -317,10 +317,9 @@ header .underline_box{
     border-color: var(--dark-button-color);
     top: 16px;
     left: 28px;
-    z-index: -2;
-    
-
+    z-index: -2; 
 }
+/*------------------ END HEADER ------------------*/
 
 
 
