@@ -9,6 +9,10 @@
     --tertiary-color:#F1F5F9;
     --text-color:#899AB1;
     --text-light-color:oklch(0.869 0.022 252.894);
+    --dark-button-color:#314158;
+    --dark-button-hc:#1C283D;
+    --arrow-button-hc:#1347E6;
+    --arrow-r-btn-color:#8EC5FF;
     /* Fonts */
     --text-font-family:"Inter", sans-serif;
     --title-font-family:"Playfair Display", serif;

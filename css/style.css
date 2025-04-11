@@ -11,17 +11,20 @@
     font-style: normal;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    -webkit-font-smoothing:antialiased;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--title-font-family);
     color: var(--secondary-color);
-    -webkit-font-smoothing:antialiased;
+   
 }
 
 h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
     font-family: var(--title-font-family);
     color:var(--tertiary-color);
-    -webkit-font-smoothing:antialiased;
+   
 }
 
 
@@ -73,7 +76,6 @@ a:hover {
 .dropdown .dropdown__body {
     visibility: hidden;
     opacity: 0;
-    
     position: absolute;
     background-color: white;
     border-radius: 4px;
@@ -84,12 +86,14 @@ a:hover {
     display: flex;
     flex-direction: column;
     transition: all ease-in-out 0.25s;
+    z-index: 1;
 }
 
 .dropdown:hover .dropdown__body {
     visibility: visible;
     opacity: 1;
     margin-top: 0;
+    z-index: 1;
 }
 
 .dropdown .dropdown__body .dropdown__body-item a {
@@ -103,8 +107,14 @@ a.dark {
     color: var(--secondary-color);
 }
 
+a.dark:hover {
+    color: var(--primary-color);
+}
 
-/*----------- NAVBAR ------------*/
+
+/*-------------- END DROPDOWN MENU ----------------- */
+
+/*------------------- NAVBAR -----------------*/
 
 nav {
     background-color: var(--secondary-color);
@@ -179,34 +189,37 @@ a.a-arrow .arrow-r {
     color: var(--primary-color);
     transition: all ease-in-out 0.25s;
     position: relative;
+    
 }
 
 a.a-arrow:hover .arrow-r{
     left: 3px;
 }
-
+/*-------------------END NAVBAR -----------------*/
 
 
 /*------------------ HEADER ------------------*/
 
 header {
     background-color: var(--secondary-color);
-    padding-top: 164px;
-    padding-bottom: 170px;
+    padding-top: 80px;
+    padding-bottom: 175px;
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+    z-index: -1;
 }
+
 header .header__container {
-   
     width: 100%;
     max-width: var(--global-max-w);
+    padding: 0px 24px;
+    align-items: center;
 }
 
 header .header__left_top {
     display: flex;
     flex-direction: column;
-    margin-right:64px ;
-    text-align: left;
-    
-    
+    margin-right:calc(var(--spacing) * 15);
+    text-align: left;    
 }
 
 header .header__left_top h1 {
@@ -214,6 +227,7 @@ header .header__left_top h1 {
     line-height: 74px;
     font-weight: 700;
     margin-bottom: 1rem;
+    letter-spacing: -1px;
 }
     
 
@@ -226,20 +240,87 @@ header .header__left_top p {
    
 header .header__left_bottom {
     display: flex;
-    gap: 20px;
+    gap:calc(var(--spacing) * 4);
     text-align: left;
+    align-items: center;
     
 }
 
-header .header__left_bottom-item {
-    padding: 1px;
+header .arrow__button {
+    padding-inline: calc(var(--spacing) * 6);
+    padding-block: calc(var(--spacing) * 3);
     background-color: var(--primary-color);
-}
-header .header__right {
-    display: flex;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+    width: 178px;
+    height: 48px;
 }
 
-header .header__right img{
+header .arrow__button:hover {
+    background-color: var(--arrow-button-hc);
+}
+
+
+header .dark__button {
+    padding-inline: calc(var(--spacing) * 6);
+    padding-block: calc(var(--spacing) * 3);
+    background-color: var(--dark-button-color);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+    width: 169px;
+    height: 48px;
+}
+
+header .dark__button:hover {
+    background-color: var(--dark-button-hc);
+}
+
+a.a-button{
+    color: white;
+    
+}
+
+a.a-button .arrow-r-btn {
+    color: var(--arrow-r-btn-color);
+    transition: all ease-in-out 0.5s;
+    position: relative;
+    
+}
+
+a.a-button:hover .arrow-r-btn{
+    left: 3px;    
+}
+
+header .header__right {
+    position: relative;
+    z-index: 2;
+}
+
+header .header__right-item{
     width: 540px;
     height: 405px;
+   
 }
+
+header .header__right-item img{
+    width: 100%;
+    height: 100%;
+}
+
+header .underline_box{
+    position: absolute;
+    width: 528px;
+    height: 405px;
+    border: 2px solid;
+    border-color: var(--dark-button-color);
+    top: 16px;
+    left: 28px;
+    z-index: -2;
+    
+
+}
+
+
+
