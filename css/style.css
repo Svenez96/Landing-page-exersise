@@ -213,8 +213,9 @@ header .header__container {
     max-width: var(--global-max-w);
     padding: 0px 24px;
     align-items: center;
+    
 }
-
+/*---------------- HEADER LEFT ----------------*/
 header .header__left_top {
     display: flex;
     flex-direction: column;
@@ -245,32 +246,45 @@ header .header__left_bottom {
     align-items: center;
     
 }
+/*---------------- BUTTON ----------------*/
 
-header .arrow__button {
-    padding-inline: calc(var(--spacing) * 6);
-    padding-block: calc(var(--spacing) * 3);
+header .arrow__button{
+    position: relative;
+    padding-inline-start:calc(var(--spacing) * 6) ;
+    padding-inline-end:calc(var(--spacing) * 11)  ;
+    padding-block: calc(var(--spacing) * 3.5);
     background-color: var(--primary-color);
     border-radius: 2px;
     cursor: pointer;
     transition: all ease-in-out 0.25s;
-    width: 178px;
-    height: 48px;
 }
 
 header .arrow__button:hover {
     background-color: var(--arrow-button-hc);
 }
 
+header  .arrow__button::before {
+    position: absolute;
+    content: '->';
+    color: var(--arrow-r-btn-color);
+    inset-block-start: 50%;
+    inset-inline-start: 77%;
+    transform: translateY(-50%);
+    transition: all ease-in-out 0.10s;
+}
+
+.arrow__button:hover::before {
+    inset-inline-start: calc(81% - 0.25rem);
+}
 
 header .dark__button {
-    padding-inline: calc(var(--spacing) * 6);
-    padding-block: calc(var(--spacing) * 3);
     background-color: var(--dark-button-color);
+    position: relative;
+    padding-inline: calc(var(--spacing) * 6.5);
+    padding-block: calc(var(--spacing) * 3.5);
     border-radius: 2px;
     cursor: pointer;
-    transition: all ease-in-out 0.25s;
-    width: 169px;
-    height: 48px;
+    transition: all ease-in-out 0.10s;
 }
 
 header .dark__button:hover {
@@ -278,21 +292,10 @@ header .dark__button:hover {
 }
 
 a.a-button{
-    color: white;
-    
+    color: white;   
 }
 
-a.a-button .arrow-r-btn {
-    color: var(--arrow-r-btn-color);
-    transition: all ease-in-out 0.5s;
-    position: relative;
-    
-}
-
-a.a-button:hover .arrow-r-btn{
-    left: 3px;    
-}
-
+/*---------------- HEADER RIGHT ----------------*/
 header .header__right {
     position: relative;
     z-index: 2;
