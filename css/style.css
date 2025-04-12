@@ -185,16 +185,27 @@ a.light:hover {
     color: white;
 }
 
-a.a-arrow .arrow-r {
-    color: var(--primary-color);
-    transition: all ease-in-out 0.25s;
+.a-arrow {
+    transition: all ease-in-out 0.15s;
     position: relative;
+    margin-right: calc(var(--spacing) * 5);
     
 }
 
-a.a-arrow:hover .arrow-r{
-    left: 3px;
+.a-arrow::before {
+    position: absolute;
+    content: '->';
+    color: var(--primary-color);
+    inset-block-start: 50%;
+    inset-inline-start: 89%;
+    transform: translateY(-50%);
+    transition: all ease-in-out 0.10s;
 }
+
+a.a-arrow:hover::before {
+    inset-inline-start: calc(93% - 0.25rem);
+}
+
 /*-------------------END NAVBAR -----------------*/
 
 
@@ -315,10 +326,10 @@ header .header__right-item img{
 header .underline_box{
     position: absolute;
     width: 528px;
-    height: 405px;
+    height: 393px;
     border: 2px solid;
     border-color: var(--dark-button-color);
-    top: 16px;
+    top: 28px;
     left: 28px;
     z-index: -2; 
 }
