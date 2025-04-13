@@ -235,8 +235,8 @@ header .header__left_top {
 }
 
 header .header__left_top h1 {
-    font-size: 64px;
-    line-height: 74px;
+    font-size: calc(var(--spacing) * 16);
+    line-height: calc(var(--spacing) * 18.5);
     font-weight: 700;
     margin-bottom: 1rem;
     letter-spacing: -1px;
@@ -244,8 +244,8 @@ header .header__left_top h1 {
     
 
 header .header__left_top p {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 7.5);
     font-weight: 400;
     margin-bottom: 2rem;
 }
@@ -329,11 +329,33 @@ header .underline_box{
     height: 393px;
     border: 2px solid;
     border-color: var(--dark-button-color);
-    top: 28px;
-    left: 28px;
+    top: calc(var(--spacing) * 8);
+    left:calc(var(--spacing) * 8);
     z-index: -2; 
 }
 /*------------------ END HEADER ------------------*/
 
 
+/*-------------------- MAIN ----------------------*/
 
+section .first__section_container{
+    display: inline-grid; 
+    grid-template-columns:repeat(3, 305px);
+    gap: calc(var(--spacing) * 16);
+    padding-inline: calc(var(--spacing) * 6);
+    padding-block: calc(var(--spacing) * 20);
+    justify-content: center;   
+}
+
+section .card__info h3 {
+    font-size:calc(var(--spacing) * 6);
+    line-height: calc(var(--spacing) * 8.5);
+    font-weight: 700;
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+section .card__info p {
+    font-size: calc(var(--spacing) * 4.5);
+    line-height: calc(var(--spacing) * 6.75);
+    font-weight: 400;
+}
