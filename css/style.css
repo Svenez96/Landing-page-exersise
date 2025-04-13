@@ -214,8 +214,8 @@ a.a-arrow:hover::before {
 header {
     background-color: var(--secondary-color);
     padding-top: 80px;
-    padding-bottom: 175px;
-    clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+    padding-bottom: 176px;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
     z-index: -1;
 }
 
