@@ -314,13 +314,12 @@ header .header__right {
 
 header .header__right-item{
     width: 540px;
-    height: 405px;
+    height: auto;
    
 }
 
-header .header__right-item img{
-    width: 100%;
-    height: 100%;
+header .header__right-item img {
+    width: 100%; 
 }
 
 header .underline_box{
