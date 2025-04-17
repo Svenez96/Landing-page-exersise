@@ -17,14 +17,38 @@ p, h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--title-font-family);
-    color: var(--secondary-color);
-   
+    color: var(--secondary-color);  
 }
+
+h2 {
+    font-size: calc(var(--spacing) * 12);
+    line-height: calc(var(--spacing) * 14.5);
+    font-weight: 700;
+}
+
+h4.icon_title {
+    font-family: var(--text-font-family);
+    font-size: calc(var(--spacing) * 4.5);
+    line-height: calc(var(--spacing) * 6);
+    font-weight: 600;
+}
+
 
 h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
     font-family: var(--title-font-family);
     color:var(--tertiary-color);
    
+}
+
+p {
+    font-size: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 8.5);
+    font-weight: 400;
+}
+
+p.card_description {
+    font-size: calc(var(--spacing) * 4.5);
+    line-height: calc(var(--spacing) * 7.75);
 }
 
 
@@ -58,8 +82,7 @@ a:hover {
 
 /*-------------- DROPDOWN MENU ----------------- */
 .dropdown {
-    position: relative;
-   
+    position: relative;  
 }
 
 .dropdown a:hover {
@@ -69,8 +92,7 @@ a:hover {
 .dropdown a svg {
     height: 12px;
     width: 12px;
-    fill: var(--text-color);
-    
+    fill: var(--text-color);  
 }
 
 .dropdown .dropdown__body {
@@ -122,15 +144,14 @@ nav {
     justify-content: center;
 }
 
-nav .nav__container {
-    
+nav .nav__container { 
     padding:0 24px;
 }
 
 nav .nav__logo {
     display:flex ;
     align-items: center;
-    padding-right:calc(var(--spacing) *4);
+    padding-right:calc(var(--spacing) * 4);
     padding-top: var(--spacing);
 }
 
@@ -150,12 +171,11 @@ nav .nav__menu {
 nav .nav__menu-item {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    
+    list-style: none;  
 }
 
 nav .nav__menu-item a {
-    padding: calc(var(--spacing) *5);
+    padding: calc(var(--spacing) * 5);
 }
 
 
@@ -165,7 +185,6 @@ nav .nav__actions {
     justify-content: flex-end;
     flex-wrap: wrap;
     flex-grow: 1;
-
 }
 
 nav .nav__actions-item {
@@ -174,7 +193,7 @@ nav .nav__actions-item {
 }
 
 nav .nav__actions-item a {
-    padding: calc(var(--spacing) *5);
+    padding: calc(var(--spacing) * 5);
 }
 
 a.light {
@@ -215,7 +234,7 @@ header {
     background-color: var(--secondary-color);
     padding-top: 80px;
     padding-bottom: 176px;
-    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
     z-index: -1;
 }
 
@@ -261,8 +280,8 @@ header .header__left_bottom {
 
 header .arrow__button{
     position: relative;
-    padding-inline-start:calc(var(--spacing) * 6) ;
-    padding-inline-end:calc(var(--spacing) * 11)  ;
+    padding-inline-start:calc(var(--spacing) * 6);
+    padding-inline-end:calc(var(--spacing) * 11);
     padding-block: calc(var(--spacing) * 3.5);
     background-color: var(--primary-color);
     border-radius: 2px;
@@ -314,8 +333,7 @@ header .header__right {
 
 header .header__right-item{
     width: 540px;
-    height: auto;
-   
+    height: auto;  
 }
 
 header .header__right-item img {
@@ -328,8 +346,8 @@ header .underline_box{
     height: 393px;
     border: 2px solid;
     border-color: var(--dark-button-color);
-    top: calc(var(--spacing) * 8);
-    left:calc(var(--spacing) * 8);
+    top: calc(var(--spacing) * 7);
+    left:calc(var(--spacing) * 7);
     z-index: -2; 
 }
 /*------------------ END HEADER ------------------*/
@@ -358,3 +376,52 @@ section .card__info p {
     line-height: calc(var(--spacing) * 6.75);
     font-weight: 400;
 }
+
+/*---------------------- FEEDBACK SECTION -------------------*/
+
+.feedback__container {
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    width:100%;
+    padding-inline:calc(var(--spacing) * 110);
+    padding-block: calc(var(--spacing) * 20);
+    max-width: var(--global-max-w);
+    background: linear-gradient(to bottom, #f1f5f9 68%, #ffffff 28%);  
+}
+
+.feedback__top {
+    text-align: center;
+}
+
+.feedback__top h2{ 
+    margin-bottom: calc(var(--spacing) * 4);
+}
+
+.feedback__content {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding-block: calc(var(--spacing) * 12);
+}
+
+.feedback__content-card {
+    text-align: center;
+    justify-content: center;
+}
+
+.feedback__content-card svg{
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.feedback__bottom {
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.feedback__bottom img{
+  width: 100%; ;
+}
+
